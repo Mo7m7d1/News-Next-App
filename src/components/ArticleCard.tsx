@@ -1,4 +1,5 @@
 import { NewsArticle } from "@/types";
+import Image from "next/image";
 
 export type ArticleCardProps = {
 	article: NewsArticle;
@@ -19,6 +20,8 @@ const ArticleCard = ({
 						src={validImage}
 						alt="article image"
 						className="h-48 w-full object-cover bg-gray-200"
+						loading="lazy"
+						decoding="async"
 					/>
 					<div className="p-4">
 						<h1 className="text-lg font-semibold">{title}</h1>
@@ -35,7 +38,7 @@ const ArticleCard = ({
 					<div className="flex items-center">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-4 w-4 fill-current text-red-500 mr-1"
+							className="h-4 w-4 fill-current text-blue-500 mr-1"
 							viewBox="0 0 20 20"
 							fill="currentColor"
 						>
